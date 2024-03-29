@@ -136,12 +136,20 @@
     background-repeat: no-repeat;
     background-position: right -50px bottom 63px;
     background-size: 214px;
-    background-image: url(../images/deal-img.png);
+    background-image: url('../images/deal-img.png');
+    background-image: -webkit-image-set(url('../images/deal-img.webp') 1x);
+    background-image: image-set(url('../images/deal-img.webp') 1x);
+    background-image: -webkit-image-set(url('../images/deal-img.avif') 1x);
+    background-image: image-set(url('../images/deal-img.avif') 1x);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/deal-img@2x.png);
+      background-image: url('../images/deal-img@2x.png');
+      background-image: -webkit-image-set(url('../images/deal-img@2x.webp') 2x);
+      background-image: image-set(url('../images/deal-img@2x.webp') 2x);
+      background-image: -webkit-image-set(url('../images/deal-img@2x.avif') 2x);
+      background-image: image-set(url('../images/deal-img@2x.avif') 2x);
     }
 
     @media only screen and (min-width: 1280px) {
