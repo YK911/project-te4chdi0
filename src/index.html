@@ -11,6 +11,296 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .mobile-menu-popup,
+      .mobile-menu-wrapper {
+        position: fixed;
+        top: 0;
+        transform: translateX(100%);
+      }
+      body {
+        padding-top: 67px;
+      }
+      .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 67px;
+      }
+      .header-nav {
+        display: none;
+      }
+      .socials-link {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(18, 20, 23, 0.1);
+        border-radius: 10px;
+        color: var(--black);
+      }
+      .socials-link:focus,
+      .socials-link:hover {
+        color: var(--green);
+        border-color: var(--green);
+        color: var(--white);
+        border-color: var(--white);
+      }
+      .mobile-menu-wrapper {
+        opacity: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(18, 20, 23, 0.4);
+        z-index: 1000;
+        overflow: hidden;
+        transition: opacity 0.3s ease-in, transform 0s 0.3s;
+      }
+      .mobile-menu-popup {
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+        width: 50vw;
+        min-width: 240px;
+        max-width: 384px;
+        height: 100vh;
+        color: var(--white);
+        background-color: var(--green);
+        z-index: 1001;
+        padding: 60px 20px 20px;
+        transition: transform 0.3s ease-in;
+      }
+      .mobile-menu-wrapper.is-open {
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 0.3s ease-in, transform;
+      }
+      .close-icon {
+        width: 24px;
+        height: 24px;
+      }
+      .mobile-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+      }
+      .menu-link::after {
+        background-color: var(--white);
+      }
+      .socials-icon {
+        width: 26px;
+        height: 26px;
+        opacity: 0.8;
+        transition: var(--icon-transition);
+        transition-property: opacity;
+      }
+      .socials-link:focus .socials-icon,
+      .socials-link:hover .socials-icon {
+        opacity: 1;
+      }
+      @media only screen and (min-width: 768px) {
+        .close-icon,
+        .hamburger-icon {
+          width: 40px;
+          height: 40px;
+        }
+        .mobile-menu-close-button {
+          top: 20px;
+          right: 32px;
+          width: 40px;
+          height: 40px;
+        }
+        .socials-link {
+          width: 44px;
+          height: 44px;
+        }
+        .socials-icon {
+          width: 28px;
+          height: 28px;
+        }
+      }
+      .hero-button,
+      .hero-title {
+        color: var(--white);
+        font-weight: 700;
+      }
+      .hero-button,
+      .hero-button-scroll {
+        transition: background-color 250ms linear;
+      }
+      .section-hero {
+        display: block;
+        position: relative;
+        background-color: var(--gray);
+        padding: 425px 20px 72px;
+        margin: 8px auto 0;
+        max-width: 335px;
+        height: 709px;
+        border-radius: 16px;
+        background-repeat: no-repeat;
+        background-position-x: calc(100% + 213px);
+        background-position-y: calc(100% + 4px);
+        background-size: 332.537% 104.761%;
+        background-image: linear-gradient(
+            357deg,
+            rgba(0, 0, 0, 0.4) 39.23%,
+            rgba(0, 0, 0, 0) 66.28%
+          ),
+          url('/images/hero-bg.jpg');
+        background-image: linear-gradient(
+            357deg,
+            rgba(0, 0, 0, 0.4) 39.23%,
+            rgba(0, 0, 0, 0) 66.28%
+          ),
+          -webkit-image-set(url('/images/hero-bg.avif') 1x);
+        background-image: linear-gradient(
+            357deg,
+            rgba(0, 0, 0, 0.4) 39.23%,
+            rgba(0, 0, 0, 0) 66.28%
+          ),
+          image-set(url('/images/hero-bg.avif') 1x);
+      }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .section-hero {
+          background-image: linear-gradient(
+              357deg,
+              rgba(0, 0, 0, 0.4) 39.23%,
+              rgba(0, 0, 0, 0) 66.28%
+            ),
+            url('/images/hero-bg@2x.jpg');
+          background-image: linear-gradient(
+              357deg,
+              rgba(0, 0, 0, 0.4) 39.23%,
+              rgba(0, 0, 0, 0) 66.28%
+            ),
+            -webkit-image-set(url('/images/hero-bg@2x.avif') 2x);
+          background-image: linear-gradient(
+              357deg,
+              rgba(0, 0, 0, 0.4) 39.23%,
+              rgba(0, 0, 0, 0) 66.28%
+            ),
+            image-set(url('/images/hero-bg@2x.avif') 2x);
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .section-hero {
+          max-width: 704px;
+          height: 857px;
+          padding: 260px 0 0 32px;
+          margin: 32px auto 0;
+          border-radius: 30px;
+          background-position-x: calc(100% + 352px);
+          background-position-y: calc(100% + 5px);
+          background-size: 186.364% 102.074%;
+        }
+      }
+      .hero-title {
+        text-align: left;
+        font-size: 38px;
+        line-height: 1.0526;
+        margin-bottom: 10px;
+      }
+      .hero-title .accent {
+        color: var(--light-green-underline);
+      }
+      @media screen and (min-width: 375px) {
+        .hero-title {
+          margin-bottom: 40px;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .hero-title {
+          font-size: 60px;
+          line-height: 1.1667;
+          margin-bottom: 32px;
+          width: 488px;
+        }
+      }
+      @media screen and (min-width: 1280px) {
+        .section-hero {
+          max-width: 1152px;
+          height: 629px;
+          padding: 164px 0 0 64px;
+          margin: 16px auto 0;
+          border-radius: 30px;
+          background-repeat: no-repeat;
+          background-position-x: 0px;
+          background-position-y: calc(100% + 123px);
+          background-size: 113.889% 139.074%;
+        }
+        .hero-title {
+          width: 564px;
+        }
+      }
+      .hero-button {
+        display: block;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        text-align: center;
+        max-width: 295px;
+        background-color: var(--green);
+        font-size: 14px;
+        line-height: 1.7143;
+        border-radius: 12px;
+      }
+      @media screen and (min-width: 375px) {
+        .hero-button {
+          padding: 14px 78px;
+        }
+      }
+      .hero-button:focus,
+      .hero-button:hover {
+        background-color: var(--dark-green);
+      }
+      .hero-button-scroll {
+        position: absolute;
+        bottom: 14px;
+        right: 14px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        cursor: pointer;
+      }
+      .hero-button-scroll:focus,
+      .hero-button-scroll:hover {
+        background-color: var(--green);
+      }
+      .hero-button-scroll-icon {
+        fill: var(--green);
+      }
+      .hero-button-scroll:focus .hero-button-scroll-icon,
+      .hero-button-scroll:hover .hero-button-scroll-icon {
+        fill: var(--white);
+      }
+      @media screen and (min-width: 768px) {
+        .hero-button {
+          font-size: 18px;
+          line-height: 1.5556;
+          padding: 16px 64px;
+          max-width: 306px;
+        }
+        .hero-button-scroll {
+          bottom: 32px;
+          right: 32px;
+          width: 48px;
+          height: 48px;
+        }
+        .hero-button-scroll-icon {
+          width: 14px;
+          height: 7px;
+        }
+      }
+    </style>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>

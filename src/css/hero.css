@@ -1,5 +1,3 @@
-/* Hero styles */
-/* mobile first */
 .section-hero {
   display: block;
   position: relative;
@@ -44,7 +42,6 @@
     ),
     image-set(url('/images/hero-bg.avif') 1x);
 }
-/* mobile @ 2x */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .section-hero {
     background-image: linear-gradient(
@@ -79,7 +76,6 @@
       image-set(url('/images/hero-bg@2x.avif') 2x);
   }
 }
-/* tablet */
 @media screen and (min-width: 768px) {
   .section-hero {
     max-width: 704px;
@@ -93,7 +89,6 @@
     background-size: 186.364% 102.074%;
   }
 }
-/* desktop */
 @media screen and (min-width: 1280px) {
   .section-hero {
     max-width: 1152px;
