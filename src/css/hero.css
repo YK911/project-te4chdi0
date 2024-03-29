@@ -9,18 +9,74 @@
   max-width: 335px;
   height: 709px;
   border-radius: 16px;
-  background-image: linear-gradient(357deg, rgba(0, 0, 0, 0.40) 39.23%, rgba(0, 0, 0, 0.00) 66.28%),
-                    url(/images/hero-bg.jpg);
   background-repeat: no-repeat;
-  background-position-x: calc(100% + 213px);  /* -566px */
-  background-position-y: calc(100% + 4px);    /* -29.886px */
+  background-position-x: calc(100% + 213px); /* -566px */
+  background-position-y: calc(100% + 4px); /* -29.886px */
   background-size: 332.537% 104.761%;
+  background-image: linear-gradient(
+      357deg,
+      rgba(0, 0, 0, 0.4) 39.23%,
+      rgba(0, 0, 0, 0) 66.28%
+    ),
+    url('/images/hero-bg.jpg');
+  background-image: linear-gradient(
+      357deg,
+      rgba(0, 0, 0, 0.4) 39.23%,
+      rgba(0, 0, 0, 0) 66.28%
+    ),
+    -webkit-image-set(url('/images/hero-bg.webp') 1x);
+  background-image: linear-gradient(
+      357deg,
+      rgba(0, 0, 0, 0.4) 39.23%,
+      rgba(0, 0, 0, 0) 66.28%
+    ),
+    image-set(url('/images/hero-bg.webp') 1x);
+  background-image: linear-gradient(
+      357deg,
+      rgba(0, 0, 0, 0.4) 39.23%,
+      rgba(0, 0, 0, 0) 66.28%
+    ),
+    -webkit-image-set(url('/images/hero-bg.avif') 1x);
+  background-image: linear-gradient(
+      357deg,
+      rgba(0, 0, 0, 0.4) 39.23%,
+      rgba(0, 0, 0, 0) 66.28%
+    ),
+    image-set(url('/images/hero-bg.avif') 1x);
 }
 /* mobile @ 2x */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .section-hero {
-    background-image: linear-gradient(357deg, rgba(0, 0, 0, 0.40) 39.23%, rgba(0, 0, 0, 0.00) 66.28%),
-                      url(/images/hero-bg@2x.jpg);
+    background-image: linear-gradient(
+        357deg,
+        rgba(0, 0, 0, 0.4) 39.23%,
+        rgba(0, 0, 0, 0) 66.28%
+      ),
+      url('/images/hero-bg@2x.jpg');
+    background-image: linear-gradient(
+        357deg,
+        rgba(0, 0, 0, 0.4) 39.23%,
+        rgba(0, 0, 0, 0) 66.28%
+      ),
+      -webkit-image-set(url('/images/hero-bg@2x.webp') 2x);
+    background-image: linear-gradient(
+        357deg,
+        rgba(0, 0, 0, 0.4) 39.23%,
+        rgba(0, 0, 0, 0) 66.28%
+      ),
+      image-set(url('/images/hero-bg@2x.webp') 2x);
+    background-image: linear-gradient(
+        357deg,
+        rgba(0, 0, 0, 0.4) 39.23%,
+        rgba(0, 0, 0, 0) 66.28%
+      ),
+      -webkit-image-set(url('/images/hero-bg@2x.avif') 2x);
+    background-image: linear-gradient(
+        357deg,
+        rgba(0, 0, 0, 0.4) 39.23%,
+        rgba(0, 0, 0, 0) 66.28%
+      ),
+      image-set(url('/images/hero-bg@2x.avif') 2x);
   }
 }
 /* tablet */
@@ -31,20 +87,10 @@
     padding: 260px 0px 0px 32px;
     margin: 32px auto 0 auto;
     border-radius: 30px;
-    background-image: linear-gradient(96deg, rgba(0, 0, 0, 0.40) 36.36%, rgba(0, 0, 0, 0.00) 51.43%),
-                      url(/images/hero-bg.jpg);
-    background-repeat: no-repeat;
-    background-position-x: calc(100% + 352px);  /* -256px */
-    background-position-y: calc(100% + 5px);    /* -12.887px */
+
+    background-position-x: calc(100% + 352px); /* -256px */
+    background-position-y: calc(100% + 5px); /* -12.887px */
     background-size: 186.364% 102.074%;
-  }
-}
-/* tablet @ 2x */
-@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
-       screen and (min-width: 768px) and (min-resolution: 192dpi) {
-  .section-hero {
-    background-image: linear-gradient(96deg, rgba(0, 0, 0, 0.40) 36.36%, rgba(0, 0, 0, 0.00) 51.43%),
-                      url(/images/hero-bg@2x.jpg);
   }
 }
 /* desktop */
@@ -55,23 +101,12 @@
     padding: 164px 0px 0px 64px;
     margin: 16px auto 0 auto;
     border-radius: 30px;
-    background-image: linear-gradient(96deg, rgba(0, 0, 0, 0.40) 36.36%, rgba(0, 0, 0, 0.00) 51.43%),
-                      url(/images/hero-bg.jpg);
     background-repeat: no-repeat;
     background-position-x: 0px;
-    background-position-y: calc(100% + 123px);    /* -122.887px */
+    background-position-y: calc(100% + 123px); /* -122.887px */
     background-size: 113.889% 139.074%;
   }
 }
-/* desktop @ 2x */
-@media screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2),
-       screen and (min-width: 1280px) and (min-resolution: 192dpi) {
-  .section-hero {
-    background-image: linear-gradient(96deg, rgba(0, 0, 0, 0.40) 36.36%, rgba(0, 0, 0, 0.00) 51.43%),
-                      url(/images/hero-bg@2x.jpg);
-  }
-}
-
 .hero-title {
   color: var(--white);
   text-align: left;
@@ -128,7 +163,8 @@
   }
 }
 
-.hero-button:hover, .hero-button:focus {
+.hero-button:hover,
+.hero-button:focus {
   background-color: var(--dark-green);
 }
 
@@ -156,7 +192,8 @@
   transition: background-color 250ms linear;
 }
 
-.hero-button-scroll:hover, .hero-button-scroll:focus {
+.hero-button-scroll:hover,
+.hero-button-scroll:focus {
   background-color: var(--green);
 }
 
@@ -164,7 +201,8 @@
   fill: var(--green);
 }
 
-.hero-button-scroll:hover .hero-button-scroll-icon, .hero-button-scroll:focus .hero-button-scroll-icon {
+.hero-button-scroll:hover .hero-button-scroll-icon,
+.hero-button-scroll:focus .hero-button-scroll-icon {
   fill: var(--white);
 }
 
